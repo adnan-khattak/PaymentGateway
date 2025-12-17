@@ -10,7 +10,8 @@ import {
   SafeAreaProvider,
   SafeAreaView,
 } from 'react-native-safe-area-context';
-import PaymentTest from './src/screens/PaymentTest';
+// import PaymentTest from './src/screens/PaymentTest';
+import AdvancedPaymentTest from './src/screens/AdvancedPaymentTest';
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -18,7 +19,8 @@ function App() {
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <SafeAreaView style={{ flex: 1, backgroundColor: '#f5f5f5' }}>
-        <PaymentTest />
+        {/* <PaymentTest /> */}
+        <AdvancedPaymentTest />
       </SafeAreaView>
     </SafeAreaProvider>
   );
