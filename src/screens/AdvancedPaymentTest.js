@@ -441,19 +441,19 @@ const AdvancedPaymentTest = () => {
   };
 
   // Restore purchases (useful for testing)
-  const restorePurchases = async () => {
-    try {
-      const restoredInfo = await Purchases.restorePurchases();
-      updateCustomerState(restoredInfo);
+  // const restorePurchases = async () => {
+  //   try {
+  //     const restoredInfo = await Purchases.restorePurchases();
+  //     updateCustomerState(restoredInfo);
       
-      Alert.alert(
-        'Restore Complete',
-        `Active entitlements: ${Object.keys(restoredInfo.entitlements.active).length}`
-      );
-    } catch (e) {
-      Alert.alert('Restore Failed', e.message);
-    }
-  };
+  //     Alert.alert(
+  //       'Restore Complete',
+  //       `Active entitlements: ${Object.keys(restoredInfo.entitlements.active).length}`
+  //     );
+  //   } catch (e) {
+  //     Alert.alert('Restore Failed', e.message);
+  //   }
+  // };
 
   // Get user ID (useful for debugging)
   const showCustomerID = async () => {
@@ -789,9 +789,9 @@ const AdvancedPaymentTest = () => {
 
       {/* Action Buttons */}
       <View style={styles.actionButtons}>
-        <TouchableOpacity style={styles.actionButton} onPress={restorePurchases}>
+        {/* <TouchableOpacity style={styles.actionButton} onPress={restorePurchases}>
           <Text style={styles.actionButtonText}>🔄 Restore Purchases</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         
         <TouchableOpacity style={styles.actionButton} onPress={showCustomerID}>
           <Text style={styles.actionButtonText}>👤 Show Customer ID</Text>
